@@ -1,94 +1,59 @@
-<!DOCTYPE html>
-<html lang='en-us'>
-
-<head>
-
-    <meta charset='UTF-8'>
-    <title>Web Visualization(Latitude)</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Visualization Data</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
 </head>
-
 <body>
-    <!--                                        NAVIGATION BAR                              -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!--nav bar start-->
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <a id="tablinks" onclick="openChannel(event, 'landing-page')" class="navbar-brand"
-                href="#landing-page">Latitude</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Plots
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a id="tablinks" onclick="openChannel(event, 'max-temp')" class="dropdown-item"
-                                    href="#max-temp">Max Temperature</a></li>
-                            <li><a id="tablinks" onclick="openChannel(event, 'humidity')" class="dropdown-item"
-                                    href="#humidity">Humidity</a></li>
-                            <li><a id="tablinks" onclick="openChannel(event, 'cloudiness')" class="dropdown-item"
-                                    href="#cloudiness">Cloudiness</a></li>
-                            <li><a id="tablinks" onclick="openChannel(event, 'wind-speed')" class="dropdown-item"
-                                    href="#wind-speed">Wind Speed</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a id="tablinks" onclick="openChannel(event, 'comparisons-page')" class="nav-link"
-                            href="#comparisons-page">Comparisons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="tablinks" onclick="openChannel(event, 'data-page')" class="nav-link"
-                            href="#data-page">Data</a>
-                    </li>
-                </ul>
-                </ul>
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand" href="#">Latitude Data</a>
             </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Plots<span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="cloudiness.html">Cloudiness</a></li>
+                        <li><a href="humidity.html">Humidity</a></li>
+                        <li><a href="temperature.html">Max Temperature</a></li>
+                        <li><a href="windspeed.html">Wind Speed</a></li>
+                    </ul>
+                <li class="active"><a href="comparison.html">Comparison</a></li>
+                <li class="active"><a href="data.html">Data</a></li>
+                </li>
+            </ul>
         </div>
     </nav>
-    <!--                                    LANDING PAGE                                      -->
-    <main>
-        <section id="landing-page" class="tabcontent">
-            <div class="card pull-left" style='width: 55rem'>
-                <div class='card-body text-center my-auto'>
-                    <h1>Summary: Latitude vs. X</h1>
-                    <img src='static/images/Fig1.png' ALIGN='left' width='200' height='200' />
-                    <br>
-                    <p>The purpose of this project was to analyze how weather changes as you get closer to the equator.
-                        To accomplish this analysis, we first pulled data from the OpenWeatherMap API
-                        to assemble a dataset on over 500 cities.
-                        <br />
-                        <br />
-                        After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs.
-                        latitude. Factors we looked at included: temperature, cloudiness, wind speed, and
-                        humidity. This site provides the source data and visualizations created as part of the analysis,
-                        as well as explanations and descriptions of any trends and correlations
-                        witnessed.
-                    </p>
-                </div>
-        </section>
-        <!--                                    Visulizations                                       -->
-        <div class='card pull-right' style='width: 55rem'>
-            <img src='static/images/Fig1.png' ALIGN='left' width='200' height='200' />
-            <img src='static/images/Fig2.png' ALIGN='right' width='200' height='200' />
 
+    <div class = 'card pull-left' style = 'width: 55rem;'>
+        <div class = 'card-body text-center my-auto'>
+            <h2 class = 'card-title'> Weather Data Summary: Latitude vs. X</h2>
+            <img src='static/images/Fig1.png' alt='Latitude_vs_Cloudiness' height='400' width='500' class='center-block'>
+            <p class = 'card-text text-left my-auto'>
+                The purpose of this project was to analyze how weather cahnges as you get closer tot he equator. 
+                To accomplish this analysis we pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities
+            </p>
+            <p class = 'card-text-2 text-left my-auto'>
+                After assembling the dataset, we used Matplotlib ti plot various aspects of the weather vs latitude. 
+                Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations
+                created as part of the analysis, as well as explanations and descriptions of any trens and correlations witnessed.
+            </p>
+        </div>
+    </div>
 
-
-
-
-          </div>
-
-
-
+<div class = 'card pull-right' style = 'width:55rem;'>
+    <div class = 'card-body text-center my-auto'>
+        <h3 class = 'card-title'> Visualizations </h3>
+        
+    </div>
+</div>
 
 
 
@@ -97,6 +62,4 @@
 
 
 </body>
-
-
 </html>
