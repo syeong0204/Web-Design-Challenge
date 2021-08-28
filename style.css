@@ -1,30 +1,43 @@
-.container {
+body{
+    background-color: grey
+}
+
+
+.nav {
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.card-title {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: center;
+}
+/*.container {
     background-color: #e6e6ff;
     margin: auto;
     padding: 20px;
-    border-radius: 40px; /*forms the round edges of this box*/
-    box-shadow: 0px 0px 40px 0px rgb(11, 11, 17); /*a faint blue shadow will appear behind the box for stylistic purposes*/
+    border-radius: 40px; forms the round edges of this box
+    box-shadow: 0px 0px 40px 0px rgb(11, 11, 17); /*a faint blue shadow will appear behind the box for stylistic purposes
     position: relative;
-}
+}*/
 
- #max-temp {
-    display: none;
-} 
-#humidity {
-    display: none;
+.card {
+    margin: 0 auto;
+    margin-left: 200px;
+    margin-right: 100px;
+    float: relative;
+    color: teal;
+    background-color: white;
 }
-#cloudiness {
-    display: none;
-}
-#wind-speed {
-    display: none;
-}
-#comparisons-page {
-    display: none;
-}
-#data-page {
-    display: none;
-} 
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
 /* Small Devices Tablets, etc */
 @media(max-width: 768px) {
 
