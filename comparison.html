@@ -13,7 +13,7 @@
 
 <body>
     <!--nav bar start-->
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a href="index.html" class="navbar-brand" href="#">Latitude Data</a>
@@ -34,23 +34,20 @@
         </div>
     </nav>
 
-    <div class='card pulled-center' style='width:55rem;'>
-        <div class='card-body text-center my-auto'>
-            <h3 class='card-title'> Comparison: Latitude vs X </h3>
-            <p class='card-image'>
-                <a href='temperature.html'><img src='static/images/max_temp.png' alt='Latitude vs Temperature'
-                        height='150' width='200'></a>
-                <a href='humidity.html'><img src='static/images/humidity.png' alt='Latitude vs Humidity' height='150'
-                        width='200'></a>
-                <a href='cloudiness.html'><img src='static/images/cloudiness.png' alt='Latitude vs Cloudiness'
-                        height='150' width='200'></a>
-                <a href='windspeed.html'><img src='static/images/wind_speed.png' alt='Latitude vs Wind Speed'
-                        height='150' width='200'></a>
-            </p>
-        </div>
-    </div>
-</div>
-
+    <a class="col-md-6 p-5 text-decoration-none" href="temperature.html">
+        <h4>Temperature </h4>
+        <img class="card-img" src="static/images/max_temp.png" alt="Lat vs. Temperature">
+        <a class="col-md-6 p-5 text-decoration-none" href="humidity.html">
+            <h4>Humidity </h4>
+            <img class="card-img" src="static/images/humidity.png" alt="Lat vs. Humidity">
+        </a>
+        <a class="col-md-6 p-5 text-decoration-none" href="cloudiness.html">
+            <h4>Cloudiness </h4>
+            <img class="card-img" src="static/images/cloudiness.png" alt="Lat vs. Cloudiness">
+        </a>
+        <a class="col-md-6 p-5 text-decoration-none" href="windspeed.html">
+            <h4>Wind Speed </h4>
+            <img class="card-img" src="static/images/wind_speed.png" alt="Lat vs. Wind Speed ">
 
 
 
