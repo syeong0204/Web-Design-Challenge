@@ -30,6 +30,15 @@ body{
     margin-left: auto;
     margin-right: auto;
  }
+.table{
+    margin: 0 auto;
+    width: 50%
+}
+
+.title{
+    text-align: center;
+}
+
 
 /* Small Devices Tablets, etc */
 @media(max-width: 768px) {
